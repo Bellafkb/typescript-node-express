@@ -1,12 +1,12 @@
-import express from 'express'
+import express, { Application, Response } from 'express'
 
-const port = 8080;
-const app = express();
+const port: string = '8080';
+const app: Application = express();
 
-app.get('/' , (req,res)=>{
+app.get('/', (res: Response) => {
     res.send('hello world')
 })
 
-app.listen(port , ()=>{
+app.listen(port, () => {
     console.log(`sever running on port ${port}`)
 })
